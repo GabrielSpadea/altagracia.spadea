@@ -1,16 +1,17 @@
 // inicio variables
 function comprarProductos(){
-    let producto = ''
+    let producto = '';
     let precio = 0;
     let cantidad = 0;
     let totalCompra = 0;
+    let cantidadTotal = 0;
     let continuarComprando = false;
 
  // bucle   
     do {
         producto = prompt('Que producto queres comprar?');
-        cantidad = parseInt(prompt('cuantos queres comprar?'))
-        console.log(cantidad)
+        cantidad = parseInt(prompt('cuantos queres comprar?'));
+
         let cantidadValidada = validarCantidad(cantidad);
     
         switch (producto) {
@@ -28,8 +29,8 @@ function comprarProductos(){
                 break
             default:
                 alert('un dato es incorrecto');
-                precio = 0
-                cantidad = 0
+                precio = 0;
+                cantidad = 0;
                 break;
         }
         totalCompra += precio * cantidadValidada;
@@ -38,8 +39,8 @@ function comprarProductos(){
     } 
     while (continuarComprando)
     return totalCompra;
-    }
-
+}  
+   
 // condicional
     function validarCantidad(cantidad) {
         while (Number.isNaN(cantidad) || cantidad === 0) {
@@ -50,7 +51,7 @@ function comprarProductos(){
             }
             cantidad = parseInt(prompt('Cuantos desea comprar'));
         }
-    return cantidad;
+         return cantidad;
     }
 // funcion envio
     function calcularEnvio(totalCompra) {
@@ -60,5 +61,6 @@ function comprarProductos(){
             alert('el envio será gratis. El total de tu compra es: '+totalCompra);
     
         }
+        return totalCompra;
     }
-    
+calcularEnvio(comprarProductos());
