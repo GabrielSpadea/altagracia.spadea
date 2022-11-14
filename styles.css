@@ -1,0 +1,23 @@
+.nav-item {
+    background-color: rgb(233, 182, 182);
+    border: none;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(224, 184, 207);
+      border: groove;
+      margin: 0x;
+      display: flex;
+      width: 50%;
+      justify-content: flex-end;
+      flex-direction: column;
+}
+ 
+body {
+    font-family: cursive;
+    background-color:rgb(182, 155, 232);
+    padding: 0px;
+ }
+footer {
+    text-align: center;
+}
