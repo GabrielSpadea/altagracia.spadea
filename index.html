@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link rel="stylesheet" href="./styles.css">
-
-    <title>Alta Gracia</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Espera Alta Gracia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal@4/minimal.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="public/css/styles.css">
 </head>
+
 <body>
+
+  <header>
+    <h1>Dulce Espera Alta Gracia</h1>
     <nav class="navbar navbar-expand-lg bg-transparent position-sticky m-5 p-5">
-        <div class="container-fluid">
-          <a class="navbar-brand " href="./paginas/contacto.html">Dulce Espera</a>
-          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto p-1 bg-transparent  ms-2 mb-lg-0">
-              <li class="nav-item ">
-                <a class="nav-link active" aria-current="page" href="./paginas/nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./paginas/tienda.html">Tienda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./paginas/estampas.html">Estampas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./paginas/galeria.html">Galeria</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./paginas/contacto.html">Contacto</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="navbar-nav ms-auto p-1 bg-transparent  ms-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active" aria-current="page" href="./paginas/nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./paginas/estampas.html">Estampas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./paginas/contacto.html">Contacto</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <form class="formulario">
-        <label>Nombre:</label>
-        <input type="text" placeholder="Nombre">
-        <br>
-        <br>
-        <label>Apellido:</label>
-        <input type="text" placeholder="Apellido">
-        <br>
-        <br>
-        <label>Telefono:</label>
-        <input type="number" placeholder="Telefono">
-        <br>
-        <br>
-        <label>Consulta:</label>
-        <textarea></textarea>
-        <br>
-        <input type="submit" value="Aceptar">
+      </div>
+    </nav>
+    <input type="search" id="buscarProducto">
+    <button id="cesta-carrito"><i class="fas fa-shopping-cart"><span id="contador-carrito">0</span></i></button>
+  </header>
 
+  <main id="producto-contenedor">
 
+  </main>
 
+  <div class="modal-contenedor">
+    <div class="modal-carrito">
+      <h3>Carrito</h3>
+      <button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
+      <div id="carrito-contenedor">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
-   
-   <footer class="footer"> ALTA GRACIA  2022</footer>
-   <script src="producto.js"></script>
-   <script src="main.js"></script>
+      </div>
+      <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+    </div>
+  </div>
+
+  <script src="./src/stock.js" type="module"></script>
+  <script src="./src/modal.js" type="module"></script>
+  <script src="./src/storage.js" type="module"></script>
+  <script src="./src/actualizarCarrito.js" type="module"></script>
+  <script src="./src/accionesCarrito.js" type="module"></script>
+  <script src="./src/buscarProducto.js" type="module"></script>
+  <script src="./src/obtenerProductos.js" type="module"></script>
+  <script src="./src/App.js" type="module"></script>
+  <script src="./src/index.js" type="module"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.js" integrity="sha512-ZHzbWDQKpcZxIT9l5KhcnwQTidZFzwK/c7gpUUsFvGjEsxPusdUCyFxjjpc7e/Wj7vLhfMujNx7COwOmzbn+2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
 </body>
-
+<footer>
+  <h6>Instagram: dulceespera.altagracia</h6>
+</footer>
 </html>
