@@ -1,3 +1,4 @@
+ // accion eliminar productos
 import { eliminarProductoCarrito } from "./accionesCarrito.js";
 
 const modalContenedor = document.querySelector('.modal-contenedor');
@@ -16,6 +17,7 @@ cerrarCarrito.addEventListener('click', () => {
 modalContenedor.addEventListener('click', () => {
     cerrarCarrito.click()
 });
+
 
 modalCarrito.addEventListener("click", (e) => {
     e.stopPropagation();

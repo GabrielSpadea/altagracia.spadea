@@ -1,3 +1,4 @@
+// stock de productos
 const productos =
 [
     {

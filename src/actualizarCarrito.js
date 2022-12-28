@@ -1,3 +1,4 @@
+ //actualizaciones del carrito de compras
 import { guardarCarritoStorage } from "./storage.js";
 
 const actualizarTotalesCarrito = (carrito) => {

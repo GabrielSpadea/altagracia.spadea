@@ -1,3 +1,4 @@
+// fetch
 const lista = document.querySelector('#listado')
 
  fetch('/data.json')
@@ -12,3 +13,4 @@ const lista = document.querySelector('#listado')
              lista.appendChild(li)
          })
      })
+     

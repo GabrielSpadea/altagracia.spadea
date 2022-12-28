@@ -1,3 +1,4 @@
+// const guardar y obtener
 const guardarCarritoStorage = (carritoDeCompras) => {
     localStorage.setItem("carrito", JSON.stringify(carritoDeCompras));
 };

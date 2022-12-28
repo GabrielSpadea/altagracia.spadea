@@ -1,3 +1,4 @@
+ // productos variedad
 import { validarProductoRepetido } from "./accionesCarrito.js";
 
 const mostrarProductos = (productos) => {

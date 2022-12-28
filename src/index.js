@@ -1,3 +1,4 @@
+ 
 import { mostrarProductos } from "./App.js";
 import { productos } from "./stock.js";
 import { obtenerCarritoStorage } from "./storage.js";

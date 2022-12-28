@@ -1,3 +1,4 @@
+ // buscador de productos
 import { mostrarProductos } from "./App.js";
 import { productos } from "./stock.js";
 

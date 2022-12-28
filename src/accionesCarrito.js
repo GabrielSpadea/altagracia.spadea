@@ -1,3 +1,4 @@
+ // acciones del carrito de compras
 import { actualizarTotalesCarrito } from './actualizarCarrito.js';
 import { productos } from './stock.js';
 import { obtenerCarritoStorage } from './storage.js';
@@ -70,5 +71,6 @@ const eliminarProductoCarrito = (productoId) => {
     actualizarTotalesCarrito(carritoActualizado);
     pintarCarrito(carritoActualizado);
 };
+
 
 export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };
