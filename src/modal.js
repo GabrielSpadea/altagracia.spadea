@@ -1,10 +1,12 @@
  // accion eliminar productos
 import { eliminarProductoCarrito } from "./accionesCarrito.js";
 
+
 const modalContenedor = document.querySelector('.modal-contenedor');
 const abrirCarrito = document.getElementById('cesta-carrito');
 const cerrarCarrito = document.getElementById('btn-cerrar-carrito');
-const modalCarrito = document.querySelector('.modal-carrito')
+const modalCarrito = document.querySelector('.modal-carrito');
+const vaciarCarrito = document.querySelector('mybtn');
 
 abrirCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
@@ -30,7 +32,8 @@ modalCarrito.addEventListener("click", (e) => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Eliminar',
-            cancelButtonText: 'Cancelar'
+            cancelButtonText: 'Cancelar',
+             
         }).then((result) => {
             if (result.isConfirmed) {
                 eliminarProductoCarrito(e.target.value);
@@ -42,4 +45,10 @@ modalCarrito.addEventListener("click", (e) => {
             }
         })
     }
+    
+    
+});
+
+vaciarCarrito.addEventListener('click', () => {
+    modalContenedor.classList.toggle('modal-active')
 });

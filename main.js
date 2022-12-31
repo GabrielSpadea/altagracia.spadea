@@ -14,3 +14,18 @@ const lista = document.querySelector('#listado')
          })
      })
      
+     async function consultarBd() {
+        const resultado = await fetch("/js/productos.json");
+        let datos = await resultado.json();
+        dataProductos = datos;}
+
+    function pagoTarjeta() {
+            console.log("se realizara el pago con tarjeta Visa");}
+
+    function borrarCarrito() {
+                limpiarCarrito();
+                articulosCarrito = [];
+                guardarStorage();
+            }
+    
+    

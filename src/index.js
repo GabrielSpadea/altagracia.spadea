@@ -14,3 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarTotalesCarrito(carrito);
     };
 });
+
+listaProductos.addEventListener("click", agregarProducto);
+
+$("carrito").click(carrito, quitarProducto);
+
+$("vaciar-carrito").click(vaciarCarrito, borrarCarrito);

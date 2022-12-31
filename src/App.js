@@ -2,7 +2,7 @@
 import { validarProductoRepetido } from "./accionesCarrito.js";
 
 const mostrarProductos = (productos) => {
-  const contenedorProductos = document.getElementById("producto-contenedor");
+const contenedorProductos = document.getElementById("producto-contenedor");
 
   contenedorProductos.innerHTML= "";
 
@@ -29,4 +29,9 @@ const mostrarProductos = (productos) => {
   });
 };
 
+function vaciarCarrito() {
+	while (contenedorCarrito.firstChild) {
+		contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+	}
+};
 export { mostrarProductos };

@@ -72,5 +72,7 @@ const eliminarProductoCarrito = (productoId) => {
     pintarCarrito(carritoActualizado);
 };
 
+const vaciarCarrito = document.querySelector("vaciar-carrito");
+
 
 export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };
